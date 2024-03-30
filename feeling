@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 5px;
-			 margin-top: 80px;
+			 margin-top: 10px;
         }
         label {
             display: block;
@@ -65,6 +65,8 @@
 	    .button-container {
             display: flex;
             justify-content: space-between; /* Puedes ajustar según tus necesidades */
+			width: 40%;
+			font-weight:800;
 			
         }
         .container {
@@ -124,7 +126,7 @@
     </div>
     <h2>FEELING Data Input Form</h2>
     <form id="dataForm">
-	     <div class="container3">
+	     <div class="container">
 	    <label for="Min">Minute:</label>
 		 <input type="number" id="Min" min="1" value="5">
 		</div>
@@ -135,176 +137,262 @@
 		</select><br>
 		 <label for="variable0">Hands:</label>
         <input type="radio" name="variable0" value="-3" required> -3
-        <input type="radio" name="variable0" value="-2.5"> -2,5
+        <input type="radio" name="variable0" value="-2,5"> -2,5
         <input type="radio" name="variable0" value="-2" > -2
-        <input type="radio" name="variable0" value="-1.5"> -1,5
+        <input type="radio" name="variable0" value="-1,5"> -1,5
+		<input type="radio" name="variable0" value="-1,25"> -1,25
         <input type="radio" name="variable0" value="-1"> -1
-	    <input type="radio" name="variable0" value="-0.5"> -0,5
+		<input type="radio" name="variable0" value="-0,75"> -0.75
+	    <input type="radio" name="variable0" value="-0,5"> -0,5
+		<input type="radio" name="variable0" value="-0,5"> -0,25
  		<input type="radio" name="variable0" value="0" checked> 0
-	    <input type="radio" name="variable0" value="0.5"> 0,5
+		<input type="radio" name="variable0" value="0,25"> 0,25
+	    <input type="radio" name="variable0" value="0,5"> 0,5
+		<input type="radio" name="variable0" value="0,75"> 0.75
         <input type="radio" name="variable0" value="1"> 1
-        <input type="radio" name="variable0" value="1.5"> 1,5
+		<input type="radio" name="variable0" value="1,25"> 1,25
+        <input type="radio" name="variable0" value="1,5"> 1,5
         <input type="radio" name="variable0" value="2"> 2
-        <input type="radio" name="variable0" value="2.5"> 2,5
+        <input type="radio" name="variable0" value="2,5"> 2,5
         <input type="radio" name="variable0" value="3"> 3
 	
         <label for="variable1">Face:</label>
         <input type="radio" name="variable1" value="-3" required> -3
-        <input type="radio" name="variable1" value="-2.5"> -2,5
+        <input type="radio" name="variable1" value="-2,5"> -2,5
         <input type="radio" name="variable1" value="-2" > -2
-        <input type="radio" name="variable1" value="-1.5"> -1,5
+        <input type="radio" name="variable1" value="-1,5"> -1,5
+		<input type="radio" name="variable1" value="-1,25"> -1,25
         <input type="radio" name="variable1" value="-1"> -1
-	    <input type="radio" name="variable1" value="-0.5"> -0,5
+		<input type="radio" name="variable1" value="-0,75"> -0.75
+	    <input type="radio" name="variable1" value="-0,5"> -0,5
+		<input type="radio" name="variable1" value="-0,25"> -0,25
  		<input type="radio" name="variable1" value="0" checked> 0
-	    <input type="radio" name="variable1" value="0.5"> 0,5
+		<input type="radio" name="variable1" value="0,25"> 0,25
+	    <input type="radio" name="variable1" value="0,5"> 0,5
+		<input type="radio" name="variable1" value="0,75"> 0.75
         <input type="radio" name="variable1" value="1"> 1
-        <input type="radio" name="variable1" value="1.5"> 1,5
+		<input type="radio" name="variable1" value="1,25"> 1,25
+        <input type="radio" name="variable1" value="1,5"> 1,5
         <input type="radio" name="variable1" value="2"> 2
-        <input type="radio" name="variable1" value="2.5"> 2,5
+        <input type="radio" name="variable1" value="2,5"> 2,5
         <input type="radio" name="variable1" value="3"> 3
         <label for="variable2">Shoulders:</label>
-        <input type="radio" name="variable2" value="-3" > -3
-        <input type="radio" name="variable2" value="-2.5"> -2.5
+        <input type="radio" name="variable2" value="-3" required> -3
+        <input type="radio" name="variable2" value="-2,5"> -2,5
         <input type="radio" name="variable2" value="-2" > -2
-        <input type="radio" name="variable2" value="-1.5"> -1.5
+        <input type="radio" name="variable2" value="-1,5"> -1,5
+		<input type="radio" name="variable2" value="-1,25"> -1,25
         <input type="radio" name="variable2" value="-1"> -1
-        <input type="radio" name="variable2" value="-0.5"> -0.5
-        <input type="radio" name="variable2" value="0" checked> 0
-        <input type="radio" name="variable2" value="0.5"> 0.5
+		<input type="radio" name="variable2" value="-0,75"> -0.75
+	    <input type="radio" name="variable2" value="-0,5"> -0,5
+		<input type="radio" name="variable2" value="-0,25"> -0,25
+ 		<input type="radio" name="variable2" value="0" checked> 0
+		<input type="radio" name="variable2" value="0,25"> 0,25
+	    <input type="radio" name="variable2" value="0,5"> 0,5
+		<input type="radio" name="variable2" value="0,75"> 0.75
         <input type="radio" name="variable2" value="1"> 1
-        <input type="radio" name="variable2" value="1.5"> 1.5
+		<input type="radio" name="variable2" value="1,25"> 1,25
+        <input type="radio" name="variable2" value="1,5"> 1,5
         <input type="radio" name="variable2" value="2"> 2
-        <input type="radio" name="variable2" value="2.5"> 2.5
+        <input type="radio" name="variable2" value="2,5"> 2,5
         <input type="radio" name="variable2" value="3"> 3
         <br>
         <label for="variable3">Chest:</label>
         <input type="radio" name="variable3" value="-3" required> -3
-        <input type="radio" name="variable3" value="-2.5"> -2.5
+        <input type="radio" name="variable3" value="-2,5"> -2,5
         <input type="radio" name="variable3" value="-2" > -2
-        <input type="radio" name="variable3" value="-1.5"> -1.5
+        <input type="radio" name="variable3" value="-1,5"> -1,5
+		<input type="radio" name="variable3" value="-1,25"> -1,25
         <input type="radio" name="variable3" value="-1"> -1
-        <input type="radio" name="variable3" value="-0.5"> -0.5
-        <input type="radio" name="variable3" value="0" checked> 0
-        <input type="radio" name="variable3" value="0.5"> 0.5
+		<input type="radio" name="variable3" value="-0,75"> -0.75
+	    <input type="radio" name="variable3" value="-0,5"> -0,5
+		<input type="radio" name="variable3" value="-0,25"> -0,25
+ 		<input type="radio" name="variable3" value="0" checked> 0
+		<input type="radio" name="variable3" value="0,25"> 0,25
+	    <input type="radio" name="variable3" value="0,5"> 0,5
+		<input type="radio" name="variable3" value="0,75"> 0.75
         <input type="radio" name="variable3" value="1"> 1
-        <input type="radio" name="variable3" value="1.5"> 1.5
+		<input type="radio" name="variable3" value="1,25"> 1,25
+        <input type="radio" name="variable3" value="1,5"> 1,5
         <input type="radio" name="variable3" value="2"> 2
-        <input type="radio" name="variable3" value="2.5"> 2.5
+        <input type="radio" name="variable3" value="2,5"> 2,5
         <input type="radio" name="variable3" value="3"> 3
-        <br>
        	 <label for="variable4">Back:</label>
         <input type="radio" name="variable4" value="-3" required> -3
-        <input type="radio" name="variable4" value="-2.5"> -2.5
+        <input type="radio" name="variable4" value="-2,5"> -2,5
         <input type="radio" name="variable4" value="-2" > -2
-        <input type="radio" name="variable4" value="-1.5"> -1.5
+        <input type="radio" name="variable4" value="-1,5"> -1,5
+		<input type="radio" name="variable4" value="-1,25"> -1,25
         <input type="radio" name="variable4" value="-1"> -1
-        <input type="radio" name="variable4" value="-0.5"> -0.5
-        <input type="radio" name="variable4" value="0" checked> 0
-        <input type="radio" name="variable4" value="0.5"> 0.5
+		<input type="radio" name="variable4" value="-0,75"> -0.75
+	    <input type="radio" name="variable4" value="-0,5"> -0,5
+		<input type="radio" name="variable4" value="-0,25"> -0,25
+ 		<input type="radio" name="variable4" value="0" checked> 0
+		<input type="radio" name="variable4" value="0,25"> 0,25
+	    <input type="radio" name="variable4" value="0,5"> 0,5
+		<input type="radio" name="variable4" value="0,75"> 0.75
         <input type="radio" name="variable4" value="1"> 1
-        <input type="radio" name="variable4" value="1.5"> 1.5
+		<input type="radio" name="variable4" value="1,25"> 1,25
+        <input type="radio" name="variable4" value="1,5"> 1,5
         <input type="radio" name="variable4" value="2"> 2
-        <input type="radio" name="variable4" value="2.5"> 2.5
+        <input type="radio" name="variable4" value="2,5"> 2,5
         <input type="radio" name="variable4" value="3"> 3
         <br>
 	    <label for="variable5">Seat:</label>
         <input type="radio" name="variable5" value="-3" required> -3
-        <input type="radio" name="variable5" value="-2.5"> -2.5
+        <input type="radio" name="variable5" value="-2,5"> -2,5
         <input type="radio" name="variable5" value="-2" > -2
-        <input type="radio" name="variable5" value="-1.5"> -1.5
+        <input type="radio" name="variable5" value="-1,5"> -1,5
+		<input type="radio" name="variable5" value="-1,25"> -1,25
         <input type="radio" name="variable5" value="-1"> -1
-        <input type="radio" name="variable5" value="-0.5"> -0.5
-        <input type="radio" name="variable5" value="0" checked> 0
-        <input type="radio" name="variable5" value="0.5"> 0.5
+		<input type="radio" name="variable5" value="-0,75"> -0.75
+	    <input type="radio" name="variable5" value="-0,5"> -0,5
+		<input type="radio" name="variable5" value="-0,25"> -0,25
+ 		<input type="radio" name="variable5" value="0" checked> 0
+		<input type="radio" name="variable5" value="0,25"> 0,25
+	    <input type="radio" name="variable5" value="0,5"> 0,5
+		<input type="radio" name="variable5" value="0,75"> 0.75
         <input type="radio" name="variable5" value="1"> 1
-        <input type="radio" name="variable5" value="1.5"> 1.5
+		<input type="radio" name="variable5" value="1,25"> 1,25
+        <input type="radio" name="variable5" value="1,5"> 1,5
         <input type="radio" name="variable5" value="2"> 2
-        <input type="radio" name="variable5" value="2.5"> 2.5
+        <input type="radio" name="variable5" value="2,5"> 2,5
         <input type="radio" name="variable5" value="3"> 3
 	    <label for="variable6">Left Knee:</label>
         <input type="radio" name="variable6" value="-3" required> -3
-        <input type="radio" name="variable6" value="-2.5"> -2.5
+        <input type="radio" name="variable6" value="-2,5"> -2,5
         <input type="radio" name="variable6" value="-2" > -2
-        <input type="radio" name="variable6" value="-1.5"> -1.5
+        <input type="radio" name="variable6" value="-1,5"> -1,5
+		<input type="radio" name="variable6" value="-1,25"> -1,25
         <input type="radio" name="variable6" value="-1"> -1
-        <input type="radio" name="variable6" value="-0.5"> -0.5
-        <input type="radio" name="variable6" value="0" checked> 0
-        <input type="radio" name="variable6" value="0.5"> 0.5
+		<input type="radio" name="variable6" value="-0,75"> -0.75
+	    <input type="radio" name="variable6" value="-0,5"> -0,5
+		<input type="radio" name="variable6" value="-0,25"> -0,25
+ 		<input type="radio" name="variable6" value="0" checked> 0
+		<input type="radio" name="variable6" value="0,25"> 0,25
+	    <input type="radio" name="variable6" value="0,5"> 0,5
+		<input type="radio" name="variable6" value="0,75"> 0.75
         <input type="radio" name="variable6" value="1"> 1
-        <input type="radio" name="variable6" value="1.5"> 1.5
+		<input type="radio" name="variable6" value="1,25"> 1,25
+        <input type="radio" name="variable6" value="1,5"> 1,5
         <input type="radio" name="variable6" value="2"> 2
-        <input type="radio" name="variable6" value="2.5"> 2.5
+        <input type="radio" name="variable6" value="2,5"> 2,5
         <input type="radio" name="variable6" value="3"> 3
 	    <label for="variable7">Right Knee:</label>
-         <input type="radio" name="variable7" value="-3" required> -3
-        <input type="radio" name="variable7" value="-2.5"> -2.5
+        <input type="radio" name="variable7" value="-3" required> -3
+        <input type="radio" name="variable7" value="-2,5"> -2,5
         <input type="radio" name="variable7" value="-2" > -2
-        <input type="radio" name="variable7" value="-1.5"> -1.5
+        <input type="radio" name="variable7" value="-1,5"> -1,5
+		<input type="radio" name="variable7" value="-1,25"> -1,25
         <input type="radio" name="variable7" value="-1"> -1
-        <input type="radio" name="variable7" value="-0.5"> -0.5
-        <input type="radio" name="variable7" value="0" checked> 0
-        <input type="radio" name="variable7" value="0.5"> 0.5
+		<input type="radio" name="variable7" value="-0,75"> -0.75
+	    <input type="radio" name="variable7" value="-0,5"> -0,5
+		<input type="radio" name="variable7" value="-0,25"> -0,25
+ 		<input type="radio" name="variable7" value="0" checked> 0
+		<input type="radio" name="variable7" value="0,25"> 0,25
+	    <input type="radio" name="variable7" value="0,5"> 0,5
+		<input type="radio" name="variable7" value="0,75"> 0.75
         <input type="radio" name="variable7" value="1"> 1
-        <input type="radio" name="variable7" value="1.5"> 1.5
+		<input type="radio" name="variable7" value="1,25"> 1,25
+        <input type="radio" name="variable7" value="1,5"> 1,5
         <input type="radio" name="variable7" value="2"> 2
-        <input type="radio" name="variable7" value="2.5"> 2.5
+        <input type="radio" name="variable7" value="2,5"> 2,5
         <input type="radio" name="variable7" value="3"> 3
 	    <label for="variable8">Legs:</label>
         <input type="radio" name="variable8" value="-3" required> -3
-        <input type="radio" name="variable8" value="-2.5"> -2.5
+        <input type="radio" name="variable8" value="-2,5"> -2,5
         <input type="radio" name="variable8" value="-2" > -2
-        <input type="radio" name="variable8" value="-1.5"> -1.5
+        <input type="radio" name="variable8" value="-1,5"> -1,5
+		<input type="radio" name="variable8" value="-1,25"> -1,25
         <input type="radio" name="variable8" value="-1"> -1
-        <input type="radio" name="variable8" value="-0.5"> -0.5
-        <input type="radio" name="variable8" value="0" checked> 0
-        <input type="radio" name="variable8" value="0.5"> 0.5
+		<input type="radio" name="variable8" value="-0,75"> -0.75
+	    <input type="radio" name="variable8" value="-0,5"> -0,5
+		<input type="radio" name="variable8" value="-0,25"> -0,25
+ 		<input type="radio" name="variable8" value="0" checked> 0
+		<input type="radio" name="variable8" value="0,25"> 0,25
+	    <input type="radio" name="variable8" value="0,5"> 0,5
+		<input type="radio" name="variable8" value="0,75"> 0.75
         <input type="radio" name="variable8" value="1"> 1
-        <input type="radio" name="variable8" value="1.5"> 1.5
+		<input type="radio" name="variable8" value="1,25"> 1,25
+        <input type="radio" name="variable8" value="1,5"> 1,5
         <input type="radio" name="variable8" value="2"> 2
-        <input type="radio" name="variable8" value="2.5"> 2.5
+        <input type="radio" name="variable8" value="2,5"> 2,5
         <input type="radio" name="variable8" value="3"> 3
 	    <label for="variable9">Left Foot:</label>
         <input type="radio" name="variable9" value="-3" required> -3
-        <input type="radio" name="variable9" value="-2.5"> -2.5
+        <input type="radio" name="variable9" value="-2,5"> -2,5
         <input type="radio" name="variable9" value="-2" > -2
-        <input type="radio" name="variable9" value="-1.5"> -1.5
+        <input type="radio" name="variable9" value="-1,5"> -1,5
+		<input type="radio" name="variable9" value="-1,25"> -1,25
         <input type="radio" name="variable9" value="-1"> -1
-        <input type="radio" name="variable9" value="-0.5"> -0.5
-        <input type="radio" name="variable9" value="0" checked> 0
-        <input type="radio" name="variable9" value="0.5"> 0.5
+		<input type="radio" name="variable9" value="-0,75"> -0.75
+	    <input type="radio" name="variable9" value="-0,5"> -0,5
+		<input type="radio" name="variable9" value="-0,25"> -0,25
+ 		<input type="radio" name="variable9" value="0" checked> 0
+		<input type="radio" name="variable9" value="0,25"> 0,25
+	    <input type="radio" name="variable9" value="0,5"> 0,5
+		<input type="radio" name="variable9" value="0,75"> 0.75
         <input type="radio" name="variable9" value="1"> 1
-        <input type="radio" name="variable9" value="1.5"> 1.5
+		<input type="radio" name="variable9" value="1,25"> 1,25
+        <input type="radio" name="variable9" value="1,5"> 1,5
         <input type="radio" name="variable9" value="2"> 2
-        <input type="radio" name="variable9" value="2.5"> 2.5
+        <input type="radio" name="variable9" value="2,5"> 2,5
         <input type="radio" name="variable9" value="3"> 3
 	    <label for="variable10">Right Foot:</label>
         <input type="radio" name="variable10" value="-3" required> -3
-        <input type="radio" name="variable10" value="-2.5"> -2.5
+        <input type="radio" name="variable10" value="-2,5"> -2,5
         <input type="radio" name="variable10" value="-2" > -2
-        <input type="radio" name="variable10" value="-1.5"> -1.5
+        <input type="radio" name="variable10" value="-1,5"> -1,5
+		<input type="radio" name="variable10" value="-1,25"> -1,25
         <input type="radio" name="variable10" value="-1"> -1
-        <input type="radio" name="variable10" value="-0.5"> -0.5
-        <input type="radio" name="variable10" value="0" checked> 0
-        <input type="radio" name="variable10" value="0.5"> 0.5
+		<input type="radio" name="variable10" value="-0,75"> -0.75
+	    <input type="radio" name="variable10" value="-0,5"> -0,5
+		<input type="radio" name="variable10" value="-0,25"> -0,25
+ 		<input type="radio" name="variable10" value="0" checked> 0
+		<input type="radio" name="variable10" value="0,25"> 0,25
+	    <input type="radio" name="variable10" value="0,5"> 0,5
+		<input type="radio" name="variable10" value="0,75"> 0.75
         <input type="radio" name="variable10" value="1"> 1
-        <input type="radio" name="variable10" value="1.5"> 1.5
+		<input type="radio" name="variable10" value="1,25"> 1,25
+        <input type="radio" name="variable10" value="1,5"> 1,5
         <input type="radio" name="variable10" value="2"> 2
-        <input type="radio" name="variable10" value="2.5"> 2.5
+        <input type="radio" name="variable10" value="2,5"> 2,5
         <input type="radio" name="variable10" value="3"> 3
  	    <label for="variable11">Overall:</label>
         <input type="radio" name="variable11" value="-3" required> -3
-        <input type="radio" name="variable11" value="-2.5"> -2.5
+        <input type="radio" name="variable11" value="-2,5"> -2,5
         <input type="radio" name="variable11" value="-2" > -2
-        <input type="radio" name="variable11" value="-1.5"> -1.5
+        <input type="radio" name="variable11" value="-1,5"> -1,5
+		<input type="radio" name="variable11" value="-1,25"> -1,25
         <input type="radio" name="variable11" value="-1"> -1
-        <input type="radio" name="variable11" value="-0.5"> -0.5
-        <input type="radio" name="variable11" value="0" checked> 0
-        <input type="radio" name="variable11" value="0.5"> 0.5
+		<input type="radio" name="variable11" value="-0,75"> -0.75
+	    <input type="radio" name="variable11" value="-0,5"> -0,5
+		<input type="radio" name="variable11" value="-0,25"> -0,25
+ 		<input type="radio" name="variable11" value="0" checked> 0
+		<input type="radio" name="variable11" value="0,25"> 0,25
+	    <input type="radio" name="variable11" value="0,5"> 0,5
+		<input type="radio" name="variable11" value="0,75"> 0.75
         <input type="radio" name="variable11" value="1"> 1
-        <input type="radio" name="variable11" value="1.5"> 1.5
+		<input type="radio" name="variable11" value="1,25"> 1,25
+        <input type="radio" name="variable11" value="1,5"> 1,5
         <input type="radio" name="variable11" value="2"> 2
-        <input type="radio" name="variable11" value="2.5"> 2.5
-        <input type="radio" name="variable11" value="3"> 3       
+        <input type="radio" name="variable11" value="2,5"> 2,5
+        <input type="radio" name="variable11" value="3"> 3   
+	 	<label for="variable12">Blower:</label>
+        <input type="radio" name="variable12" value="1/7" required> 1/7
+		<input type="radio" name="variable12" value="2/7" > 2/7
+		<input type="radio" name="variable12" value="3/7" > 3/7
+		<input type="radio" name="variable12" value="4/7" checked> 4/7
+		<input type="radio" name="variable12" value="5/7" > 5/7
+		<input type="radio" name="variable12" value="6/7" > 6/7		
+		<input type="radio" name="variable12" value="7/7" > 5/7		
+			    <label for="listBox2">PTC:</label>
+        <select id="listBox2" required>
+	      <option value="PTC20">PTC20</option>
+         <option value="PTC22">PTC22</option>
+		  <option value="PTC24">PTC24</option>
+		   <option value="PTC25">PTC25</option>
+		</select><br>
 		
 		
 	<!-- 	INPUT VARIABLES CAN BE ADDED /OR TITLE CHANGE  -->
@@ -312,23 +400,33 @@
 	   
 		<label for="input1" onclick="editLabelValue(this)">Input 1 :</label>
 	<!-- 	<input type="text" id="input1text" required> -->
-        <input type="text" id="input1" required>
+        <input type="number" id="input1" required>
        
         <label for="input2" onclick="editLabelValue(this)">Input 2  :</label>
 	   <!--  <input type="text" id="input2text" required> -->
-        <input type="text" id="input2" required>
+        <input type="number" id="input2" required>
 		
 		<label for="input3" onclick="editLabelValue(this)"> Input 3 :</label>
 	<!-- 	<input type="text" id="input3text" required> -->
-        <input type="text" id="input3" required>
+        <input type="number" id="input3" required>
+			<label for="input4" onclick="editLabelValue(this)"> Input 4 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input4" required>
+		<label for="input5" onclick="editLabelValue(this)"> Input 5 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input5" required>
+		<label for="input6" onclick="editLabelValue(this)"> Input 6 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input6" required>		
 		
-     	<label for="input4">Commnets :</label>
-        <input type="text" id="input4" required>
+	
+     	<label for="input7">Commnets :</label>
+        <input type="text" id="input7" required>
 		
 		
 	<!-- 	<button class="floating-buttons" onclick="addToTable()">Add to Table</button> -->
 		
-        <div class="floating-buttons">
+        <div class="button-container">
         <button type="button" onclick="addToTable()">Add to Table</button>
 	
 		<button type="button" onclick="exportToCSV()">Export to CSV</button>
@@ -357,10 +455,15 @@
 		    <th>Left Foot</th>				
             <th>Right Foot</th>
 			<th>Overall</th>
+			<th>Blower</th>
             <th onclick="editCellValue(this)">Input 1</th>
             <th onclick="editCellValue(this)">Input 2</th>
             <th onclick="editCellValue(this)">Input 3</th>
-            <th>Comments</th>
+			<th onclick="editCellValue(this)">Input 4</th>
+			<th onclick="editCellValue(this)">Input 5</th>
+			<th onclick="editCellValue(this)">Input 6</th>
+		     <th>Comments</th>
+			<th>PTCSetting</th>
 	        <th>Member</th>		
             <th>Timestamp</th>
         </tr>
@@ -381,7 +484,7 @@
             op=[document.getElementById("Min").value]
 		 
             // Get values from radio buttons for variables 1 to 10
-            for (var i = 0; i <= 11; i++) {
+            for (var i = 0; i <= 12; i++) {
                 var variableName = "variable" + i;
                 var selectedValue = document.querySelector('input[name="' + variableName + '"]:checked').value;
                 op.push(selectedValue)
@@ -396,12 +499,22 @@
                 document.getElementById("input1").value,
                 document.getElementById("input2").value,
                 document.getElementById("input3").value,
-                document.getElementById("input4").value,				
+                document.getElementById("input4").value,
+                document.getElementById("input5").value,
+                document.getElementById("input6").value,
+                document.getElementById("input7").value,
+
+
+				
             ];
            // for (var i = 12; i < i+inputs.length; i++) {
            //     var m = newRow.insertCell(i);
            //    m.innerHTML = inputs[i];
            // }
+		   
+		    var f = document.getElementById("listBox2");
+			var ptcset = f.options[f.selectedIndex].value;
+		   
             var e = document.getElementById("listBox");
 			var drivr = e.options[e.selectedIndex].value;
             var time = new Date().toLocaleString();
@@ -412,7 +525,7 @@
                // var cell = newRow.insertCell(i);
                // cell.innerHTML = allValues[i];
            // }           
-            var allValues = op.concat(inputs, drivr, [time]);  
+            var allValues = op.concat(inputs,ptcset, drivr, [time]);  
             for (var i = 0; i < allValues.length; i++) {
                 var cell = newRow.insertCell(i);
                 cell.innerHTML = allValues[i] ;
@@ -485,30 +598,31 @@
            // }
 		   //RESET the option values to 0 
 		  var botonesOpcion = document.querySelectorAll('input[name=variable0]');
-		   botonesOpcion[6].checked = true;
+		   botonesOpcion[9].checked = true;
 		   var botonesOpcion = document.querySelectorAll('input[name=variable1]');
-		   botonesOpcion[6].checked = true;
+		   botonesOpcion[9].checked = true;
 		   var botonesOpcion = document.querySelectorAll('input[name=variable2]');
-		   botonesOpcion[6].checked = true;		   
+		   botonesOpcion[9].checked = true;		   
            var botonesOpcion = document.querySelectorAll('input[name=variable3]');
-		   botonesOpcion[6].checked = true;	
+		   botonesOpcion[9].checked = true;	
            var botonesOpcion = document.querySelectorAll('input[name=variable4]');
-		   botonesOpcion[6].checked = true;		   
+		   botonesOpcion[9].checked = true;		   
 		   var botonesOpcion = document.querySelectorAll('input[name=variable5]');
-		   botonesOpcion[6].checked = true;
+		   botonesOpcion[9].checked = true;
 		   var botonesOpcion = document.querySelectorAll('input[name=variable6]');
-		   botonesOpcion[6].checked = true;		   
+		   botonesOpcion[9].checked = true;		   
            var botonesOpcion = document.querySelectorAll('input[name=variable7]');
-		   botonesOpcion[6].checked = true;	
+		   botonesOpcion[9].checked = true;	
            var botonesOpcion = document.querySelectorAll('input[name=variable8]');
-		   botonesOpcion[6].checked = true;		
+		   botonesOpcion[9].checked = true;		
            var botonesOpcion = document.querySelectorAll('input[name=variable9]');
-		   botonesOpcion[6].checked = true;		 
+		   botonesOpcion[9].checked = true;		 
            var botonesOpcion = document.querySelectorAll('input[name=variable10]');
-		   botonesOpcion[6].checked = true;	
+		   botonesOpcion[9].checked = true;	
            var botonesOpcion = document.querySelectorAll('input[name=variable11]');
-		   botonesOpcion[6].checked = true;			   
-
+		   botonesOpcion[9].checked = true;			   
+             var botonesOpcion = document.querySelectorAll('input[name=variable12]');
+		   botonesOpcion[3].checked = true;
 		   
 		 //  for (var i = 1; i <= 10; i++) {
                // var variableName = "variable" + i;
@@ -538,7 +652,9 @@
 			document.getElementById("input2").value = "";
 			document.getElementById("input3").value = "";
 			document.getElementById("input4").value = "";
-		
+		     document.getElementById("input5").value = "";
+			 document.getElementById("input6").value = "";
+			 document.getElementById("input7").value = "";
 		}
 		
 		function deleteLastRow() {
