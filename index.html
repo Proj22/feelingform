@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input and Export</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 5px;
+			 margin-top: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+			background-color: lightgrey;
+			font-weight:  bolder;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 2px;
+            margin-bottom: 2px;
+	
+        }
+
+		
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-top: 2px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 2px;
+            text-align: left;
+        }
+		
+		button {
+            margin-top: 1px;
+            padding: 8px;
+            cursor: pointer;
+			font-weight:800;
+			background-color: lightgreen;
+        }
+		button2 {
+		     display: flex;
+            margin-top: 1px;
+            padding: 8px;
+            cursor: pointer;
+			font-weight:400;
+			background-color: red;
+        }	
+	
+        #timestamp-container {
+            width: 40%;
+			display: flex;
+            align-items: center;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px;
+        }
+	    .button-container {
+            display: flex;
+            justify-content: space-between; /* Puedes ajustar según tus necesidades */
+			width: 40%;
+			font-weight:800;
+			
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }	
+        .container2 {
+		    display: flex;
+            align-items: center;
+			width: 30%;
+           margin-right: 10px;
+		   margin-left: 10px;
+        }
+		   .container3 {
+		    position: fixed;
+		    display: flex;
+		    top: 5px; /* Ajusta la distancia desde la parte superior según tus preferencias */
+            left: 5px; /* Ajusta la distancia desde la derecha según tus preferencias */
+            z-index: 1000; /* Asegura que esté en la parte superior */
+		    width: 30%;
+		 }
+        .floating-buttons {
+            position: fixed;
+			display: flex;
+            top: 30px; /* Ajusta la distancia desde la parte superior según tus preferencias */
+            left: 1px; /* Ajusta la distancia desde la derecha según tus preferencias */
+            z-index: 1000; /* Asegura que esté en la parte superior */
+	        color: white;
+			border: yes;
+			<!-- width: 10%; -->
+       }
+		    .fixed-button {
+      position: fixed;
+      Top: 10px;
+      left: 10px;
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 1px;
+      cursor: pointer;
+    }
+		
+		
+		
+    </style>
+</head>
+<body>
+   <div class="container">
+   <h2> <label for="project">Project:</label> </h2> 
+   <input type="text" id="project" required>
+   </div>
+   <!-- Timestamp Container -->
+    <div id="timestamp-container">
+        <button onclick="mostrarTimestamp()">Start</button>
+        <p id="fetxa"></p>
+    </div>
+    <h2>FEELING Data Input Form</h2>
+    <form id="dataForm">
+	     <div class="container">
+	    <label for="Min">Minute:</label>
+		 <input type="number" id="Min" min="1" value="5">
+		</div>
+	    <label for="listBox">DRV/ASS:</label>
+        <select id="listBox" required>
+	      <option value="ASS">ASS</option>
+          <option value="DRV" selected>DRV</option>
+		</select><br>
+		 <label for="variable0">Hands:</label>
+        <input type="radio" name="variable0" value="-3" required> -3
+        <input type="radio" name="variable0" value="-2,5"> -2,5
+        <input type="radio" name="variable0" value="-2" > -2
+        <input type="radio" name="variable0" value="-1,5"> -1,5
+		<input type="radio" name="variable0" value="-1,25"> -1,25
+        <input type="radio" name="variable0" value="-1"> -1
+		<input type="radio" name="variable0" value="-0,75"> -0.75
+	    <input type="radio" name="variable0" value="-0,5"> -0,5
+		<input type="radio" name="variable0" value="-0,5"> -0,25
+ 		<input type="radio" name="variable0" value="0" checked> 0
+		<input type="radio" name="variable0" value="0,25"> 0,25
+	    <input type="radio" name="variable0" value="0,5"> 0,5
+		<input type="radio" name="variable0" value="0,75"> 0.75
+        <input type="radio" name="variable0" value="1"> 1
+		<input type="radio" name="variable0" value="1,25"> 1,25
+        <input type="radio" name="variable0" value="1,5"> 1,5
+        <input type="radio" name="variable0" value="2"> 2
+        <input type="radio" name="variable0" value="2,5"> 2,5
+        <input type="radio" name="variable0" value="3"> 3
+	
+        <label for="variable1">Face:</label>
+        <input type="radio" name="variable1" value="-3" required> -3
+        <input type="radio" name="variable1" value="-2,5"> -2,5
+        <input type="radio" name="variable1" value="-2" > -2
+        <input type="radio" name="variable1" value="-1,5"> -1,5
+		<input type="radio" name="variable1" value="-1,25"> -1,25
+        <input type="radio" name="variable1" value="-1"> -1
+		<input type="radio" name="variable1" value="-0,75"> -0.75
+	    <input type="radio" name="variable1" value="-0,5"> -0,5
+		<input type="radio" name="variable1" value="-0,25"> -0,25
+ 		<input type="radio" name="variable1" value="0" checked> 0
+		<input type="radio" name="variable1" value="0,25"> 0,25
+	    <input type="radio" name="variable1" value="0,5"> 0,5
+		<input type="radio" name="variable1" value="0,75"> 0.75
+        <input type="radio" name="variable1" value="1"> 1
+		<input type="radio" name="variable1" value="1,25"> 1,25
+        <input type="radio" name="variable1" value="1,5"> 1,5
+        <input type="radio" name="variable1" value="2"> 2
+        <input type="radio" name="variable1" value="2,5"> 2,5
+        <input type="radio" name="variable1" value="3"> 3
+        <label for="variable2">Shoulders:</label>
+        <input type="radio" name="variable2" value="-3" required> -3
+        <input type="radio" name="variable2" value="-2,5"> -2,5
+        <input type="radio" name="variable2" value="-2" > -2
+        <input type="radio" name="variable2" value="-1,5"> -1,5
+		<input type="radio" name="variable2" value="-1,25"> -1,25
+        <input type="radio" name="variable2" value="-1"> -1
+		<input type="radio" name="variable2" value="-0,75"> -0.75
+	    <input type="radio" name="variable2" value="-0,5"> -0,5
+		<input type="radio" name="variable2" value="-0,25"> -0,25
+ 		<input type="radio" name="variable2" value="0" checked> 0
+		<input type="radio" name="variable2" value="0,25"> 0,25
+	    <input type="radio" name="variable2" value="0,5"> 0,5
+		<input type="radio" name="variable2" value="0,75"> 0.75
+        <input type="radio" name="variable2" value="1"> 1
+		<input type="radio" name="variable2" value="1,25"> 1,25
+        <input type="radio" name="variable2" value="1,5"> 1,5
+        <input type="radio" name="variable2" value="2"> 2
+        <input type="radio" name="variable2" value="2,5"> 2,5
+        <input type="radio" name="variable2" value="3"> 3
+        <br>
+        <label for="variable3">Chest:</label>
+        <input type="radio" name="variable3" value="-3" required> -3
+        <input type="radio" name="variable3" value="-2,5"> -2,5
+        <input type="radio" name="variable3" value="-2" > -2
+        <input type="radio" name="variable3" value="-1,5"> -1,5
+		<input type="radio" name="variable3" value="-1,25"> -1,25
+        <input type="radio" name="variable3" value="-1"> -1
+		<input type="radio" name="variable3" value="-0,75"> -0.75
+	    <input type="radio" name="variable3" value="-0,5"> -0,5
+		<input type="radio" name="variable3" value="-0,25"> -0,25
+ 		<input type="radio" name="variable3" value="0" checked> 0
+		<input type="radio" name="variable3" value="0,25"> 0,25
+	    <input type="radio" name="variable3" value="0,5"> 0,5
+		<input type="radio" name="variable3" value="0,75"> 0.75
+        <input type="radio" name="variable3" value="1"> 1
+		<input type="radio" name="variable3" value="1,25"> 1,25
+        <input type="radio" name="variable3" value="1,5"> 1,5
+        <input type="radio" name="variable3" value="2"> 2
+        <input type="radio" name="variable3" value="2,5"> 2,5
+        <input type="radio" name="variable3" value="3"> 3
+       	 <label for="variable4">Back:</label>
+        <input type="radio" name="variable4" value="-3" required> -3
+        <input type="radio" name="variable4" value="-2,5"> -2,5
+        <input type="radio" name="variable4" value="-2" > -2
+        <input type="radio" name="variable4" value="-1,5"> -1,5
+		<input type="radio" name="variable4" value="-1,25"> -1,25
+        <input type="radio" name="variable4" value="-1"> -1
+		<input type="radio" name="variable4" value="-0,75"> -0.75
+	    <input type="radio" name="variable4" value="-0,5"> -0,5
+		<input type="radio" name="variable4" value="-0,25"> -0,25
+ 		<input type="radio" name="variable4" value="0" checked> 0
+		<input type="radio" name="variable4" value="0,25"> 0,25
+	    <input type="radio" name="variable4" value="0,5"> 0,5
+		<input type="radio" name="variable4" value="0,75"> 0.75
+        <input type="radio" name="variable4" value="1"> 1
+		<input type="radio" name="variable4" value="1,25"> 1,25
+        <input type="radio" name="variable4" value="1,5"> 1,5
+        <input type="radio" name="variable4" value="2"> 2
+        <input type="radio" name="variable4" value="2,5"> 2,5
+        <input type="radio" name="variable4" value="3"> 3
+        <br>
+	    <label for="variable5">Seat:</label>
+        <input type="radio" name="variable5" value="-3" required> -3
+        <input type="radio" name="variable5" value="-2,5"> -2,5
+        <input type="radio" name="variable5" value="-2" > -2
+        <input type="radio" name="variable5" value="-1,5"> -1,5
+		<input type="radio" name="variable5" value="-1,25"> -1,25
+        <input type="radio" name="variable5" value="-1"> -1
+		<input type="radio" name="variable5" value="-0,75"> -0.75
+	    <input type="radio" name="variable5" value="-0,5"> -0,5
+		<input type="radio" name="variable5" value="-0,25"> -0,25
+ 		<input type="radio" name="variable5" value="0" checked> 0
+		<input type="radio" name="variable5" value="0,25"> 0,25
+	    <input type="radio" name="variable5" value="0,5"> 0,5
+		<input type="radio" name="variable5" value="0,75"> 0.75
+        <input type="radio" name="variable5" value="1"> 1
+		<input type="radio" name="variable5" value="1,25"> 1,25
+        <input type="radio" name="variable5" value="1,5"> 1,5
+        <input type="radio" name="variable5" value="2"> 2
+        <input type="radio" name="variable5" value="2,5"> 2,5
+        <input type="radio" name="variable5" value="3"> 3
+	    <label for="variable6">Left Knee:</label>
+        <input type="radio" name="variable6" value="-3" required> -3
+        <input type="radio" name="variable6" value="-2,5"> -2,5
+        <input type="radio" name="variable6" value="-2" > -2
+        <input type="radio" name="variable6" value="-1,5"> -1,5
+		<input type="radio" name="variable6" value="-1,25"> -1,25
+        <input type="radio" name="variable6" value="-1"> -1
+		<input type="radio" name="variable6" value="-0,75"> -0.75
+	    <input type="radio" name="variable6" value="-0,5"> -0,5
+		<input type="radio" name="variable6" value="-0,25"> -0,25
+ 		<input type="radio" name="variable6" value="0" checked> 0
+		<input type="radio" name="variable6" value="0,25"> 0,25
+	    <input type="radio" name="variable6" value="0,5"> 0,5
+		<input type="radio" name="variable6" value="0,75"> 0.75
+        <input type="radio" name="variable6" value="1"> 1
+		<input type="radio" name="variable6" value="1,25"> 1,25
+        <input type="radio" name="variable6" value="1,5"> 1,5
+        <input type="radio" name="variable6" value="2"> 2
+        <input type="radio" name="variable6" value="2,5"> 2,5
+        <input type="radio" name="variable6" value="3"> 3
+	    <label for="variable7">Right Knee:</label>
+        <input type="radio" name="variable7" value="-3" required> -3
+        <input type="radio" name="variable7" value="-2,5"> -2,5
+        <input type="radio" name="variable7" value="-2" > -2
+        <input type="radio" name="variable7" value="-1,5"> -1,5
+		<input type="radio" name="variable7" value="-1,25"> -1,25
+        <input type="radio" name="variable7" value="-1"> -1
+		<input type="radio" name="variable7" value="-0,75"> -0.75
+	    <input type="radio" name="variable7" value="-0,5"> -0,5
+		<input type="radio" name="variable7" value="-0,25"> -0,25
+ 		<input type="radio" name="variable7" value="0" checked> 0
+		<input type="radio" name="variable7" value="0,25"> 0,25
+	    <input type="radio" name="variable7" value="0,5"> 0,5
+		<input type="radio" name="variable7" value="0,75"> 0.75
+        <input type="radio" name="variable7" value="1"> 1
+		<input type="radio" name="variable7" value="1,25"> 1,25
+        <input type="radio" name="variable7" value="1,5"> 1,5
+        <input type="radio" name="variable7" value="2"> 2
+        <input type="radio" name="variable7" value="2,5"> 2,5
+        <input type="radio" name="variable7" value="3"> 3
+	    <label for="variable8">Legs:</label>
+        <input type="radio" name="variable8" value="-3" required> -3
+        <input type="radio" name="variable8" value="-2,5"> -2,5
+        <input type="radio" name="variable8" value="-2" > -2
+        <input type="radio" name="variable8" value="-1,5"> -1,5
+		<input type="radio" name="variable8" value="-1,25"> -1,25
+        <input type="radio" name="variable8" value="-1"> -1
+		<input type="radio" name="variable8" value="-0,75"> -0.75
+	    <input type="radio" name="variable8" value="-0,5"> -0,5
+		<input type="radio" name="variable8" value="-0,25"> -0,25
+ 		<input type="radio" name="variable8" value="0" checked> 0
+		<input type="radio" name="variable8" value="0,25"> 0,25
+	    <input type="radio" name="variable8" value="0,5"> 0,5
+		<input type="radio" name="variable8" value="0,75"> 0.75
+        <input type="radio" name="variable8" value="1"> 1
+		<input type="radio" name="variable8" value="1,25"> 1,25
+        <input type="radio" name="variable8" value="1,5"> 1,5
+        <input type="radio" name="variable8" value="2"> 2
+        <input type="radio" name="variable8" value="2,5"> 2,5
+        <input type="radio" name="variable8" value="3"> 3
+	    <label for="variable9">Left Foot:</label>
+        <input type="radio" name="variable9" value="-3" required> -3
+        <input type="radio" name="variable9" value="-2,5"> -2,5
+        <input type="radio" name="variable9" value="-2" > -2
+        <input type="radio" name="variable9" value="-1,5"> -1,5
+		<input type="radio" name="variable9" value="-1,25"> -1,25
+        <input type="radio" name="variable9" value="-1"> -1
+		<input type="radio" name="variable9" value="-0,75"> -0.75
+	    <input type="radio" name="variable9" value="-0,5"> -0,5
+		<input type="radio" name="variable9" value="-0,25"> -0,25
+ 		<input type="radio" name="variable9" value="0" checked> 0
+		<input type="radio" name="variable9" value="0,25"> 0,25
+	    <input type="radio" name="variable9" value="0,5"> 0,5
+		<input type="radio" name="variable9" value="0,75"> 0.75
+        <input type="radio" name="variable9" value="1"> 1
+		<input type="radio" name="variable9" value="1,25"> 1,25
+        <input type="radio" name="variable9" value="1,5"> 1,5
+        <input type="radio" name="variable9" value="2"> 2
+        <input type="radio" name="variable9" value="2,5"> 2,5
+        <input type="radio" name="variable9" value="3"> 3
+	    <label for="variable10">Right Foot:</label>
+        <input type="radio" name="variable10" value="-3" required> -3
+        <input type="radio" name="variable10" value="-2,5"> -2,5
+        <input type="radio" name="variable10" value="-2" > -2
+        <input type="radio" name="variable10" value="-1,5"> -1,5
+		<input type="radio" name="variable10" value="-1,25"> -1,25
+        <input type="radio" name="variable10" value="-1"> -1
+		<input type="radio" name="variable10" value="-0,75"> -0.75
+	    <input type="radio" name="variable10" value="-0,5"> -0,5
+		<input type="radio" name="variable10" value="-0,25"> -0,25
+ 		<input type="radio" name="variable10" value="0" checked> 0
+		<input type="radio" name="variable10" value="0,25"> 0,25
+	    <input type="radio" name="variable10" value="0,5"> 0,5
+		<input type="radio" name="variable10" value="0,75"> 0.75
+        <input type="radio" name="variable10" value="1"> 1
+		<input type="radio" name="variable10" value="1,25"> 1,25
+        <input type="radio" name="variable10" value="1,5"> 1,5
+        <input type="radio" name="variable10" value="2"> 2
+        <input type="radio" name="variable10" value="2,5"> 2,5
+        <input type="radio" name="variable10" value="3"> 3
+ 	    <label for="variable11">Overall:</label>
+        <input type="radio" name="variable11" value="-3" required> -3
+        <input type="radio" name="variable11" value="-2,5"> -2,5
+        <input type="radio" name="variable11" value="-2" > -2
+        <input type="radio" name="variable11" value="-1,5"> -1,5
+		<input type="radio" name="variable11" value="-1,25"> -1,25
+        <input type="radio" name="variable11" value="-1"> -1
+		<input type="radio" name="variable11" value="-0,75"> -0.75
+	    <input type="radio" name="variable11" value="-0,5"> -0,5
+		<input type="radio" name="variable11" value="-0,25"> -0,25
+ 		<input type="radio" name="variable11" value="0" checked> 0
+		<input type="radio" name="variable11" value="0,25"> 0,25
+	    <input type="radio" name="variable11" value="0,5"> 0,5
+		<input type="radio" name="variable11" value="0,75"> 0.75
+        <input type="radio" name="variable11" value="1"> 1
+		<input type="radio" name="variable11" value="1,25"> 1,25
+        <input type="radio" name="variable11" value="1,5"> 1,5
+        <input type="radio" name="variable11" value="2"> 2
+        <input type="radio" name="variable11" value="2,5"> 2,5
+        <input type="radio" name="variable11" value="3"> 3   
+	 	<label for="variable12">Blower:</label>
+        <input type="radio" name="variable12" value="1/7" required> 1/7
+		<input type="radio" name="variable12" value="2/7" > 2/7
+		<input type="radio" name="variable12" value="3/7" > 3/7
+		<input type="radio" name="variable12" value="4/7" checked> 4/7
+		<input type="radio" name="variable12" value="5/7" > 5/7
+		<input type="radio" name="variable12" value="6/7" > 6/7		
+		<input type="radio" name="variable12" value="7/7" > 5/7		
+			    <label for="listBox2">PTC:</label>
+        <select id="listBox2" required>
+	      <option value="PTC20">PTC20</option>
+         <option value="PTC22">PTC22</option>
+		  <option value="PTC24">PTC24</option>
+		   <option value="PTC25">PTC25</option>
+		</select><br>
+		
+		
+	<!-- 	INPUT VARIABLES CAN BE ADDED /OR TITLE CHANGE  -->
+	
+	   
+		<label for="input1" onclick="editLabelValue(this)">Input 1 :</label>
+	<!-- 	<input type="text" id="input1text" required> -->
+        <input type="number" id="input1" required>
+       
+        <label for="input2" onclick="editLabelValue(this)">Input 2  :</label>
+	   <!--  <input type="text" id="input2text" required> -->
+        <input type="number" id="input2" required>
+		
+		<label for="input3" onclick="editLabelValue(this)"> Input 3 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input3" required>
+			<label for="input4" onclick="editLabelValue(this)"> Input 4 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input4" required>
+		<label for="input5" onclick="editLabelValue(this)"> Input 5 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input5" required>
+		<label for="input6" onclick="editLabelValue(this)"> Input 6 :</label>
+	<!-- 	<input type="text" id="input3text" required> -->
+        <input type="number" id="input6" required>		
+		
+	
+     	<label for="input7">Commnets :</label>
+        <input type="text" id="input7" required>
+		
+		
+	<!-- 	<button class="floating-buttons" onclick="addToTable()">Add to Table</button> -->
+		
+        <div class="button-container">
+        <button type="button" onclick="addToTable()">Add to Table</button>
+	
+		<button type="button" onclick="exportToCSV()">Export to CSV</button>
+         <!-- Reset  Button -->		
+        <button type="button" onclick="resetValues()">Reset Feeling</button>
+	    <button type="button" onclick="resetValues2()">Reset inputs/Comments</button>
+ 
+         <!-- Delete Last Row Button -->
+        <button type="button" onclick="deleteLastRow()">Delete Last Row</button>
+		</div>
+    </form>
+
+    <h2>Data Table</h2>
+    <table id="dataTable">
+        <tr > 
+            <th >Min</th>
+			<th >Hands</th>
+			<th >Face</th>
+            <th>Shoulders</th>
+            <th>chest</th>
+			<th>Back</th>
+            <th>Seat</th>
+		    <th>Left knee</th>			
+            <th>Right knee</th>
+            <th>Legs</th>
+		    <th>Left Foot</th>				
+            <th>Right Foot</th>
+			<th>Overall</th>
+			<th>Blower</th>
+            <th onclick="editCellValue(this)">Input 1</th>
+            <th onclick="editCellValue(this)">Input 2</th>
+            <th onclick="editCellValue(this)">Input 3</th>
+			<th onclick="editCellValue(this)">Input 4</th>
+			<th onclick="editCellValue(this)">Input 5</th>
+			<th onclick="editCellValue(this)">Input 6</th>
+		     <th>Comments</th>
+			<th>PTCSetting</th>
+	        <th>Member</th>		
+            <th>Timestamp</th>
+        </tr>
+    </table>
+
+    <script>
+	
+//NOT USED * JUST WHEN INSTEAD OF USING OPTION BUTTONS SLIDERS BAR ARE SELECTED 
+     //   function updateInput(inputId, sliderId) {
+        //    var inputValue = document.getElementById(sliderId).value;
+         //   document.getElementById(inputId).value = inputValue;
+       // }
+//FUNCTION TO ADD ITEM INTO THE PREVISUALIZATION TABLE  
+        function addToTable() {
+            var table = document.getElementById("dataTable");
+            var newRow = table.insertRow(-1);
+			var op=[]				
+            op=[document.getElementById("Min").value]
+		 
+            // Get values from radio buttons for variables 1 to 10
+            for (var i = 0; i <= 12; i++) {
+                var variableName = "variable" + i;
+                var selectedValue = document.querySelector('input[name="' + variableName + '"]:checked').value;
+                op.push(selectedValue)
+			  
+			   // var op = newRow.insertCell(i - 1);
+               // cell.innerHTML = selectedValue;
+            }
+            //var t = newRow.insertCell(11);
+			//t.innerHTML = time;
+			// Get values from input boxes
+            var inputs = [
+                document.getElementById("input1").value,
+                document.getElementById("input2").value,
+                document.getElementById("input3").value,
+                document.getElementById("input4").value,
+                document.getElementById("input5").value,
+                document.getElementById("input6").value,
+                document.getElementById("input7").value,
+
+
+				
+            ];
+           // for (var i = 12; i < i+inputs.length; i++) {
+           //     var m = newRow.insertCell(i);
+           //    m.innerHTML = inputs[i];
+           // }
+		   
+		    var f = document.getElementById("listBox2");
+			var ptcset = f.options[f.selectedIndex].value;
+		   
+            var e = document.getElementById("listBox");
+			var drivr = e.options[e.selectedIndex].value;
+            var time = new Date().toLocaleString();
+			//var timeCell = newRow.insertCell(16);
+			//cell.innerHTML = time;
+           // var allValues = cell.concat(inputs, [time]);
+               // for (var i = 0; i < allValues.length; i++) {
+               // var cell = newRow.insertCell(i);
+               // cell.innerHTML = allValues[i];
+           // }           
+            var allValues = op.concat(inputs,ptcset, drivr, [time]);  
+            for (var i = 0; i < allValues.length; i++) {
+                var cell = newRow.insertCell(i);
+                cell.innerHTML = allValues[i] ;
+				cell.onclick = function() { editCellValue(this); };
+				
+            }   
+	  }
+
+	  
+	  
+//EXPORT ALL THE REGISTER INFO TO A csv FILE DOWNLOADED INTO YOUR DOWNLOAD FOLDER WITH THE NAME EXPORTE_DATA
+        function exportToCSV() {
+            var table = document.getElementById("dataTable");
+            var rows = table.getElementsByTagName("tr");
+			var columns=table.getElementsByTagName("th");
+			var pro=document.getElementById("project").value;
+			var tre=document.getElementById("fetxa").innerHTML ;
+			var csvData = [];
+            csvData=[pro];
+			csvData.push(tre);
+			//csvData.push('variable1','variable2','variable3','input1','input2')
+			
+			//csvData.push( 'Face;Shoulders;Chest;Back;Seat;Left knee;Right knee; Legs;Left foot; Right foot; input1;input2;input3;Comments;Member;timestamp');
+    //        for (var i = 0; i < rows.length; i++) {
+		 
+
+		  // for (var i = 0; i < rows.length; i++) {
+                var rowData = [];
+                var cells = table.getElementsByTagName("th");
+                for (var j = 0; j < cells.length; j++) {
+                    rowData.push(cells[j].innerText);
+                  }
+
+                csvData.push(rowData.join(';'));
+           // }		 
+
+
+		   for (var i = 0; i < rows.length; i++) {
+                var rowData = [];
+                var cells = rows[i].getElementsByTagName("td");
+
+                for (var j = 0; j < cells.length; j++) {
+                    rowData.push(cells[j].innerText);
+                }
+
+                csvData.push(rowData.join(';'));
+            }
+
+            var csvContent = "data:text/csv;charset=utf-8," + csvData.join('\n');
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "exported_data.csv");
+            document.body.appendChild(link);
+            link.click();
+        }
+		function displayTimestamp() {
+            var timestampContainer = document.getElementById("timestamp");
+            var time = new Date().toLocaleTimeString();
+            timestampContainer.innerHTML = "Timestamp: " + time;
+        }
+		function resetValues() {
+            //document.getElementById("variable1").value = "";
+            //document.getElementById("variable2").value = "";
+            //document.getElementById("variable3").value = "";
+
+          //  var options = document.getElementsByName("variable1");
+            //for (var i = 0; i < options.length; i++) {
+           //     options[i].checked = false;
+           // }
+		   //RESET the option values to 0 
+		  var botonesOpcion = document.querySelectorAll('input[name=variable0]');
+		   botonesOpcion[9].checked = true;
+		   var botonesOpcion = document.querySelectorAll('input[name=variable1]');
+		   botonesOpcion[9].checked = true;
+		   var botonesOpcion = document.querySelectorAll('input[name=variable2]');
+		   botonesOpcion[9].checked = true;		   
+           var botonesOpcion = document.querySelectorAll('input[name=variable3]');
+		   botonesOpcion[9].checked = true;	
+           var botonesOpcion = document.querySelectorAll('input[name=variable4]');
+		   botonesOpcion[9].checked = true;		   
+		   var botonesOpcion = document.querySelectorAll('input[name=variable5]');
+		   botonesOpcion[9].checked = true;
+		   var botonesOpcion = document.querySelectorAll('input[name=variable6]');
+		   botonesOpcion[9].checked = true;		   
+           var botonesOpcion = document.querySelectorAll('input[name=variable7]');
+		   botonesOpcion[9].checked = true;	
+           var botonesOpcion = document.querySelectorAll('input[name=variable8]');
+		   botonesOpcion[9].checked = true;		
+           var botonesOpcion = document.querySelectorAll('input[name=variable9]');
+		   botonesOpcion[9].checked = true;		 
+           var botonesOpcion = document.querySelectorAll('input[name=variable10]');
+		   botonesOpcion[9].checked = true;	
+           var botonesOpcion = document.querySelectorAll('input[name=variable11]');
+		   botonesOpcion[9].checked = true;			   
+             var botonesOpcion = document.querySelectorAll('input[name=variable12]');
+		   botonesOpcion[3].checked = true;
+		   
+		 //  for (var i = 1; i <= 10; i++) {
+               // var variableName = "variable" + i;
+                // Obtener todos los botones de opción con el nombre 'opcion1'
+              //  var botonesOpcion = document.querySelectorAll('input[name=variable1]')
+			            // Desmarcar todos los botones de opción
+                 //botonesOpcion.forEach(function (boton) {
+               //  boton.checked[0] = false;	
+				//});
+              //  var botonesOpcion2 = document.querySelectorAll('input[name=variableName]');
+		      //  botonesOpcion2[6].checked = true;	
+				
+				
+				//var options = document.getElementsByName(variableName);
+                 //   for (var i = 0; i < options.length; i++) {
+                  //      options[i].checked = false;
+
+                   //        }
+			 
+                
+		         // }
+		   
+        }
+		function resetValues2() {
+		
+		    document.getElementById("input1").value = "";
+			document.getElementById("input2").value = "";
+			document.getElementById("input3").value = "";
+			document.getElementById("input4").value = "";
+		     document.getElementById("input5").value = "";
+			 document.getElementById("input6").value = "";
+			 document.getElementById("input7").value = "";
+		}
+		
+		function deleteLastRow() {
+            var table = document.getElementById("dataTable");
+            var rowCount = table.rows.length;
+
+            if (rowCount > 1) {
+                table.deleteRow(rowCount - 1);
+            } else {
+                alert("Cannot delete the last row. The table should have at least one row.");
+            }
+        }
+        function mostrarTimestamp() {
+            var fechaActual = new Date();
+            var fechaTexto = obtenerFormatoFecha(fechaActual);
+            document.getElementById("fetxa").innerText = fechaTexto;
+        }
+
+        function obtenerFormatoFecha(fecha) {
+            var opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+            return fecha.toLocaleDateString('es-ES', opciones);
+        }
+		
+		// Edit inputs labels-------------------------------------------------------------------
+		
+		
+		  function editLabelValue(label) {
+			var currentValue = label.innerText;
+			var newValue = prompt("Ingresa el nuevo nombre:", currentValue);
+			
+			if (newValue !== null) {
+			  label.innerText = newValue;
+			}
+		  }
+
+	   // Edit table ------------------------------------------------------------------------
+	  function editCellValue(cell) {
+		var table = document.getElementById("myTable");
+		var currentValue = cell.innerText;
+		<!-- var newValue = prompt("Enter new value:",innerHTML = newValue); -->
+		var newValue = prompt("Enter new value:",currentValue);
+		if (newValue !== null) {
+		 cell.innerHTML = newValue;
+		}
+	  }		
+		
+		// Prevent updating or refreshing the browser------------------------------------------
+        window.onbeforeunload = function () {
+            return "Are you sure you want to leave?";
+        };
+    </script>
+
+</body>
+</html>
